@@ -40,9 +40,9 @@ if( !class_exists('MV_Testimonials_Post_Type')){
         public function add_meta_boxes(){
             add_meta_box(
                 'mv_testimonials_meta_box',
-                esc_html__( 'Testimonials Options', 'mv_testimonials' ),
+                esc_html__( 'Testimonials Options', 'mv-testimonials' ),
                 array( $this, 'add_inner_meta_boxes' ),
-                'mv_testimonials',
+                'mv-testimonials',
                 'normal',
                 'high'
             );
