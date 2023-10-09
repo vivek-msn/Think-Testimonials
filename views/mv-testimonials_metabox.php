@@ -1,7 +1,7 @@
 <?php
-    $occupation = get_post_meta( $post->ID, 'mv_testimonials_occupation', true);
-    $company = get_post_meta( $post->ID, 'mv_testimonials_company', true);
-    $user_url = get_post_meta( $post->ID, 'mv_testimonials_user_url', true);
+   $occupation = get_post_meta( $post->ID, 'mv_testimonials_occupation', true );
+   $company = get_post_meta( $post->ID, 'mv_testimonials_company', true );
+   $user_url = get_post_meta( $post->ID, 'mv_testimonials_user_url', true );
 ?>
 <table class="form-table mv-testimonials-metabox"> 
 <input type="hidden" name="mv_testimonials_nonce" value="<?php echo wp_create_nonce( "mv_testimonials_nonce" ); ?>">
