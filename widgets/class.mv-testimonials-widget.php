@@ -63,7 +63,7 @@ class MV_Testimonials_Widget extends WP_Widget{
 
     public function widget( $args,$instance){
         $default_title = 'MV Testimonials';
-        $title = ! empty( $instance['title'] ) ? $instance['title'] : default_title;
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : $default_title;
         $number = ! empty( $instance['number'] ) ? $instance['number'] : 5;
         $image = isset( $instance['image'] ) ? $instance['image'] : false;
         $occupation = isset( $instance['occupation'] ) ? $instance['occupation'] : false;

@@ -36,8 +36,9 @@
                 <span class="occupation"><?php echo esc_html( $occupation_meta ); ?></span>
             <?php endif; ?>
             <?php if( $company ): ?>
-                <span class="company"><a href="<?php echo esc_attr($url_meta)?>"><?php echo esc_html( $company_meta ); ?></span>
+                <span class="company"><a href="<?php echo esc_attr( $url_meta )?>"><?php echo esc_html( $company_meta ); ?></a></span>
             <?php endif; ?>
+        </div>
     </div>
 <?php
         endwhile;
