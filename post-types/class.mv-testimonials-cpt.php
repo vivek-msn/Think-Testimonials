@@ -15,9 +15,9 @@ if( !class_exists('MV_Testimonials_Post_Type')){
                 'mv-testimonials',
                 array(
                     'label' => esc_html__( 'Testimonial','mv-testimonials' ),
-                    'description' => esc_html__( 'Testimonial','mv-testimonials' ),
+                    'description' => esc_html__( 'Testimonials','mv-testimonials' ),
                     'labels' => array(
-                        'name' => esc_html__( 'Testimonial','mv-testimonials' ),
+                        'name' => esc_html__( 'Testimonials','mv-testimonials' ),
                         'singular_name' => esc_html__( 'Testimonial','mv-testimonials' ),
                     ),
                     'public' => true,
@@ -64,13 +64,15 @@ if( !class_exists('MV_Testimonials_Post_Type')){
                 return;
             }
 
-            if( isset( $_POST['post_type'] ) && $_POST['post_type'] == 'mv-testimonials' ){
+            if( isset( $_POST['post_type'] ) && $_POST['post_type'] === 'mv-testimonials' ){
                 if( ! current_user_can( 'edit_page', $post_id ) ){
                     return;
                 }elseif( ! current_user_can( 'edit_post', $post_id ) ){
                     return;
                 }
             }
+
+            
             if (isset($_POST['action']) && $_POST['action'] == 'editpost') {
 
                 $old_occupation = get_post_meta( $post_id, 'mv_testimonials_occupation', true ); 

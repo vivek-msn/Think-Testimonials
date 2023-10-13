@@ -31,7 +31,7 @@
                 <?php endif; ?>
                 <?php the_content(); ?>
         </div>
-        <div class="meta"></div>
+        <div class="meta">
             <?php if( $occupation ): ?>
                 <span class="occupation"><?php echo esc_html( $occupation_meta ); ?></span>
             <?php endif; ?>
